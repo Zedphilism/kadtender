@@ -1,0 +1,178 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.8;
+  background: url('assets/bg1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  animation: subtleZoom 40s ease-in-out infinite alternate;
+  color: #111;
+  backdrop-filter: blur(8px);
+}
+
+@keyframes subtleZoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.03); }
+}
+
+header, footer {
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(14px);
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+section.cards-group {
+  margin-bottom: 3rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+section.cards-group h2 {
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  color: #222;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.cards-wrapper {
+  display: flex;
+  overflow-x: auto;
+  gap: 1.5rem;
+  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.card {
+  flex: 0 0 85%;
+  scroll-snap-align: start;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  min-width: 320px;
+  max-width: 500px;
+  animation: fadeIn 0.8s ease-in-out both;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  border-color: #999;
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  color: #222;
+}
+
+.card ul {
+  padding-left: 1.2rem;
+  margin: 0.5rem 0 0 0;
+}
+
+.card p {
+  margin: 0.5rem 0;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.button:hover {
+  background: #444;
+}
+
+/* Rules section styling */
+.intro, .rules {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Risk colors */
+.card.high-risk {
+  border-left: 6px solid #8B0000;
+}
+
+.card.medium-risk {
+  border-left: 6px solid #B8860B;
+}
+
+.card.low-risk {
+  border-left: 6px solid #0047AB;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cards-wrapper {
+    gap: 1rem;
+  }
+  .card {
+    flex: 0 0 95%;
+    min-width: 280px;
+  }
+}
+
+ul, ol {
+  padding-left: 1.2rem;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 0.5rem;
+  color: #ddd;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem 2rem;
+  background: transparent;
+  animation: fadeIn 1.2s ease-in-out;
+}
